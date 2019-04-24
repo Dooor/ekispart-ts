@@ -1,8 +1,8 @@
 {
   "name": "ekispart-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript SDK for ekispert API",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "prepare": "tsc",
