@@ -38,7 +38,10 @@ export type Corporation = {
 export type Line = {
   Color: string;
   Name: string;
-  Type: string;
+  Type: {
+    text: string;
+    detail: string;
+  } | string;
   corporationIndex: string;
 }
 
@@ -55,7 +58,7 @@ export type Exit = {
 export type ErrorResponse = {
   ResultSet: {
     apiVersion: string;
-    engineVersoin: string;
+    engineVersion: string;
     Error: {
       Message: string;
       code: string;
@@ -74,9 +77,9 @@ export type StationInformation = {
 export type StationResponse = {
   ResultSet: {
     apiVersion: string;
-    engineVersoin: string;
-    max: number;
-    offset: number;
+    engineVersion: string;
+    max: string;
+    offset: string;
     Point?: Point[];
   }
 }
@@ -86,10 +89,8 @@ export type StationInfoType = 'rail' | 'nearrail' | 'welfare' | 'exit';
 export type StationInfoResponse = {
   ResultSet: {
     apiVersion: string;
-    engineVersoin: string;
-    max: number;
-    offset: number;
-    Information: StationInformation[];
+    engineVersion: string;
+    Information: StationInformation;
   }
 }
 
