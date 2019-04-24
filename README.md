@@ -11,7 +11,7 @@ yarn add ekispart-ts
 
 ### TypeScript
 
-```
+```ts
 import { client as EkispartClient } from "ekispart-ts"
 const ekispartClient = new EkispartClient({ accessKey: 'xxx', format: 'json' })
 ekispartClient.getStation('新宿')
