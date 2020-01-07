@@ -28,7 +28,7 @@
     "@types/node": "11.15.3",
     "jest": "24.7.1",
     "jest-fetch-mock": "2.1.2",
-    "ts-jest": "24.0.2",
+    "ts-jest": "24.3.0",
     "ts-node": "8.1.0",
     "typescript": "3.4.5"
   }
