@@ -1,3 +1,3 @@
-import Client from './client';
+import Client, { IClient } from './client';
 
-export { Client };
+export { Client, IClient };
