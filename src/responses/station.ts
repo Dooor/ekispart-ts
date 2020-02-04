@@ -1,5 +1,7 @@
 import * as Types from '../types';
 
+import { TypeCheck } from '../utils/TypeCheck';
+
 interface IStationResponseInput {
   points: Types.Point[];
 }
@@ -11,8 +13,10 @@ export class StationResponse {
   }
 
   public static fromJS = (json: Types.StationResponse) => {
+    const pointObj = json['ResultSet']['Point'] || [];
+
     return new StationResponse({
-      points: json['ResultSet']['Point'] || [],
+        points: TypeCheck.toArray<Types.Point>(pointObj),
     })
   }
 }

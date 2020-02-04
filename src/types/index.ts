@@ -80,7 +80,7 @@ export type StationResponse = {
     engineVersion: string;
     max: string;
     offset: string;
-    Point?: Point[];
+    Point?: Point[] | Point;
   }
 }
 
