@@ -7,7 +7,12 @@ import {
   StationInfoResponse,
 } from '../responses';
 
-export default class Client {
+export interface IClient {
+  getStation: (name: string) => Promise<StationResponse>;
+  getStationInfo: (code: number, type: Types.StationInfoType) => Promise<StationInfoResponse>;
+}
+
+export default class Client implements IClient {
   private accessKey: string;
   private format: Types.ResponseFormatType;
   private endpoint: string = 'api.ekispert.jp';
