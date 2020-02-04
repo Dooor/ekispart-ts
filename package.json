@@ -1,12 +1,13 @@
 {
   "name": "ekispart-ts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TypeScript SDK for ekispert API",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "prepare": "tsc",
-    "build": "tsc"
+    "build": "tsc",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "@types/node": "11.15.5",
     "jest": "25.1.0",
     "jest-fetch-mock": "3.0.1",
+    "standard-version": "^7.1.0",
     "ts-jest": "25.2.0",
     "ts-node": "8.6.2",
     "typescript": "3.7.5"
